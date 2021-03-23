@@ -1,0 +1,17 @@
+<h2>Welcome to Positive Vibes!</h2>
+<p>Please login or signup below:</p>
+
+<nav>
+  <% if logged_in? %>
+
+    <a href="/posts/new"> Create Post </a>
+    <a href="/logout"><input type="submit" value="Logout"></a>
+    <p>Hello, <%=current_user.username %></p>
+
+  <% else %>
+    <a href="/signup"><input type="submit" value="Sign up"></a>
+    <br>
+    <a href="/login"><input type="submit" value="Login"></a>
+  <%end %>
+
+</nav>
