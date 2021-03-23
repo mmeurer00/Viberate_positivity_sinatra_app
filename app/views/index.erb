@@ -4,9 +4,9 @@
 <nav>
   <% if logged_in? %>
 
-    <a href="/posts/new"> Create Post </a>
-    <a href="/logout"><input type="submit" value="Logout"></a>
-    <p>Hello, <%=current_user.username %></p>
+    <a href="/posts/index"> <input type="sumbit" value="Posts"></a>
+    <a href="/logout"> <input type="sumbit" value="Logout"></a>
+    <p>Welcome, <%=current_user.user_name %></p>
 
   <% else %>
     <a href="/signup"><input type="submit" value="Sign up"></a>
