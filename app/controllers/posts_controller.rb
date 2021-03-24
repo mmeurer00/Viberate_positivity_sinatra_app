@@ -18,16 +18,16 @@ class PostsController < ApplicationController
 
     post '/posts' do
       if logged_in?
-          #if params[:content] == ""
-              #rediect "/posts/new"
-          #else
+          if params[:content] == ""
+            "Error #{post.errors.full_messages.join(", ")}"
+          else
               @post = Post.new(params["post"])
               if @post.save
                   redirect "/posts/#{@post.id}"
               else
                   redirect "/posts/new"
               end
-          #end
+          end
       else
         redirect to '/login'
       end
@@ -45,11 +45,12 @@ class PostsController < ApplicationController
     get '/posts/:id/edit' do
       if logged_in?
         @post = Post.find_by_id(params[:id])
-        if @post && @post.user == current_user
+        #if @post && @post.user == current_user
           erb :'/posts/edit_post'
-        else
-          redirect to '/posts'
-        end
+          
+        #else
+          #redirect to '/posts'
+        #end
       else
         redirect to '/login'
       end
@@ -58,24 +59,24 @@ class PostsController < ApplicationController
     patch '/posts/:id' do
       if logged_in?
           @post = Post.find_by_id(params[:id])
-          if @post && @post.user == current_user
+          #if @post && @post.user == current_user
               @post.update(content: params["content"])
               redirect to "/posts/#{@post.id}"
-          else
-              redirect to "/posts/#{@post.id}/edit"
-          end
+          #else
+              #redirect to "/posts/#{@post.id}/edit"
+          #end
             redirect to '/posts'
       else
       end
         redirect to '/login'
     end
-  
-    delete '/posts/:id/delete' do
+    
+    delete '/posts/:id' do
       if logged_in?
         @post = Post.find_by_id(params[:id])
-        if @post && @post.user == current_user
+        #if @post.user == current_user
           @post.destroy
-        end
+        #end
         redirect to '/posts'
       else
         redirect to '/login'

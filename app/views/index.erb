@@ -1,17 +1,30 @@
-<h2>Welcome to Positive Vibes!</h2>
-<p>Please login or signup below:</p>
+
 
 <nav>
   <% if logged_in? %>
-
-    <a href="/posts"> <input type="sumbit" value="Posts"></a>
-    <a href="/logout"> <input type="sumbit" value="Logout"></a>
-    <p>Welcome, <%=current_user.user_name %></p>
+  <h2> Welcome back, <%=current_user.user_name %> !</h2>
+    <h3>Menu:</h3>
+    <a href="/posts"><button type="button">Post Feed</button></a>
+    <br>
+    <br>
+    <a href="/posts/new"><button type="button">Write New Post</button></a>
+    <br>
+    <br>
+    <a href="users/<%=current_user.slug%>"<button type="button">My Posts</button></a>
+    <br>
+    <br>
+    <a href="/*****FILL ME IN"><button type="button">Friends</button></a>
+    <br>
+    <br>
+    <a href="/logout"><button type="button">Logout</button></a>
 
   <% else %>
-    <a href="/signup"><input type="submit" value="Sign up"></a>
+    <h2>Welcome to Positive Vibes!</h2>
+    <h3>Please login or signup below:</h3>
+    <a href="/signup">button type="button">Sign Up!/button></a>
     <br>
-    <a href="/login"><input type="submit" value="Login"></a>
+    <br>
+    <a href="/login">button type="button">Login!/button></a>
   <%end %>
 
 </nav>
