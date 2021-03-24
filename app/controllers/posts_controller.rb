@@ -75,7 +75,8 @@ class PostsController < ApplicationController
       if logged_in?
         @post = Post.find_by_id(params[:id])
         #if @post.user == current_user
-          @post.destroy
+        #erb :'/posts/show_post'
+        @post.destroy
         #end
         redirect to '/posts'
       else

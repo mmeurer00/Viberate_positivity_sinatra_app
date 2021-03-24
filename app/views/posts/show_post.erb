@@ -3,8 +3,11 @@
 <br>
 <br>
 <h3> Menu: </h3>
-  <a href="/posts/<%=@post.id%>/delete"<button type="button">Delete Post</button></a>
-  <a rel=”nofollow” data-method=”delete” href=”/posts/<%=@post.id%>">Delete</a>
+  <br>
+  <form action= "/posts/<%=@post.id%>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete Post">
+  </form> 
   <br>
   <br>
   <a href="/posts/<%=@post.id%>/edit"<button type="button">Edit Post</button></a>
