@@ -22,6 +22,7 @@ class PostsController < ApplicationController
             "Error #{post.errors.full_messages.join(", ")}"
           else
               @post = Post.new(params["post"])
+              @post.user = current_user
               if @post.save
                   redirect "/posts/#{@post.id}"
               else

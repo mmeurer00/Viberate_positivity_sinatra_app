@@ -1,6 +1,8 @@
-<p> <%= @user.user_name %> 's posts >
+<h2> @<%= @user.user_name %>'s posts </h2>
+<ul>
 <% @user.posts.each do |post| %>
   <div>
     <%= post.content %>
   </div>
 <% end %>
+</ul>
