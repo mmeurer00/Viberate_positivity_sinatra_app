@@ -1,4 +1,24 @@
 class UsersController < ApplicationController
+  get '/users/search' do
+    if User.where(user_name: params["search"]).length > 0
+      redirect "/users/#{params["search"]}"
+    else
+      redirect '/'
+    end
+  end
+
+  post '/users/follow/:id' do
+    @user = User.find(params[:id])
+    @current_user.following << @user
+    redirect '/users/#{params[:id]}'
+  end
+
+  post '/users/:id/unfollow' do
+    @user = User.find(params[:id])
+    @current_user.following_relationships.find_by(following_id: @user.id).destroy
+    redirect '/users/#{params[:id]}'
+  end
+
     get '/users/:slug' do
       @user = User.find_by_slug(params[:slug])
      
