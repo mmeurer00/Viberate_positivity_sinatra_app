@@ -1,0 +1,9 @@
+<h3> Following </h3>
+<ul>
+<% current_user.following.each do |user| %>
+    <li>
+    <%= user.user_name %>
+    <li>
+<% end %>
+<ul>
+

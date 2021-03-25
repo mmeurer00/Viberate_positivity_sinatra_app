@@ -23,5 +23,11 @@ class ApplicationController < Sinatra::Base
         @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
     end
 
+    def following?
+        user = User.find_by_slug(params[:slug])
+        current_user.following.include?(user)
     end
+  end
+
+
 end
