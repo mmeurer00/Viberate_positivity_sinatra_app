@@ -27,6 +27,8 @@ class ApplicationController < Sinatra::Base
         user = User.find_by_slug(params[:slug])
         current_user.following.include?(user)
     end
+
+    
   end
 
 

@@ -1,0 +1,10 @@
+<h2>Positive Post Feed</h2>
+<% current_user.following.each do |user| %>
+    <% user.posts.each do |post| %>
+        <li>
+        <%= user.user_name %>
+        <br>
+            <%= post.content %>
+        </li>
+    <% end %> 
+<% end %>
