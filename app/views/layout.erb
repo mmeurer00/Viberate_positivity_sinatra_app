@@ -1,28 +1,71 @@
-<!doctype html>
-<html lang='en'>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset='UTF-8'>
-    <h3>Postive Vibes</h3>
-    <link href="stylesheet.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/stylesheets/application.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Positive Vibes</title>
 </head>
-<body>
-    <header>
-        <div class="wrapper">
-        <div class="logo">
-            
+<body class="page-bg">
+    <!----------- START NAVBAR --------------->
+    <nav class="navbar navbar-expand-lg navbar-light nav-bar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <!----- <img src="/images/logo.png" width="50" height="50"> ----->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <% if logged_in? %>
+                    <li class="nav-item">
+                    <a class="nav-link active fs-4 " aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link active fs-4" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link active fs-4" href="/contact">Contact</a>
+                    </li>
+                <% else %>
+                    <li class="nav-item">
+                    <a class="nav-link active fs-4" href="/signup">Signup</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link active fs-4" href="/login">Login</a>
+                    </li>
+                <% end%>
+            </ul>
+          <form action="/search" method="GET">
+            <input type="text" name="search" placeholder="Search..." aria-label="Search..."</p>
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form> 
+            </form>
+            </div>
         </div>
-    <div class="topnav">
-      <a class="active" href="/">Home</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a> </p>
-      <form action="users/search" method="GET">
-      <input type="text" name="search" placeholder="Search..."</p>
-      <input type="submit">
-      </form>
+    </nav>
+<!----------- END NAVBAR --------------->
+<!----------- START FLASH --------------->
+<!----------- END FLASH --------------->
+    
+    <div class='container-sm bg-light mt-3'>
+        <div class="text-center" >
+             <%= yield %>
+        
+        </div>
+
+        <% if logged_in? %>
+            <br><br>
+            <form action="/logout" method="post">
+                <input type="hidden" name="_method" value="delete">
+                <input type="submit" value="Logout">
+            </form>
+        <% end %>
     </div>
-  </header>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-<%= yield %>

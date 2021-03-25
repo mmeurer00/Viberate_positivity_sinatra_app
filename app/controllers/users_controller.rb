@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  get '/users/search' do
+  get '/search' do
     if User.where(user_name: params["search"]).length > 0
       redirect "/users/#{params["search"]}"
     else
