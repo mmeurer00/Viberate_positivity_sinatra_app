@@ -7,12 +7,12 @@
     margin:auto;
 }
 header{
-    background-color: lightblue;
+    background-color: lightgreen;
 }
 h1 {
     color: navy;
     margin-left: 20px;
 }
-.topnav{
-    background-color: lightblue;
+nav.bg-green{
+    background-color: red; 
 }
