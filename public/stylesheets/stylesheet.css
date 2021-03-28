@@ -6,22 +6,19 @@
     width: 1170px;
     margin:auto;
 }
-header{
-    background-color: lightgreen;
-}
 h1 {
     color: 252, 246, 68;
     margin-left: 20px;
 }
-.nav{ position: fixed; /* Set the navbar to fixed position */
+.nav{
   top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+  width: 20%; /* Full width */
 }
 body{
         margin: 0;
         font-family: var(--bs-font-sans-serif);
         font-size: 1.1rem;
-        font-weight: 300;
+        font-weight: 200;
         line-height: 1.5;
         color: #212529;
         background-color:#fff;

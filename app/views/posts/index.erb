@@ -1,22 +1,22 @@
 <center>
-<h2>Positive Post Feed</h2>
+<h2>Discover Positive Posts!</h2>
 <ul>
 <% @posts.each do |post| %>
-  <div class="card" style="width: 30rem;">
+  <div class="card" style="width: 40rem;">
   <div class="card-body">
     <!----- <h5 class="card-title"></h5> ------>
     <h6 class="card-subtitle mb-2"><%= post.user.user_name %>
     <% if current_user.user_name != post.user.user_name %>
       <% if post.user.followers.include?(current_user) == false %>
       <form action="/users/<%=post.user.id%>/follow" method = "POST">
-          <input type="submit" value = "Follow Account">
+          <input type="submit" value = "Follow">
       </form>
               <% else %>    
       <form action="/users/<%=post.user.id%>/unfollow" method = "POST">
-            <input type="submit" value = "Unfollow Account">   
+            <input type="submit" value = "Unfollow">   
       </form>
-      <% end %> </h6>
-    <%end%>
+      <% end %> 
+    <%end%></h6>
     <p class="card-text"><%= post.content %></p>
   </div>
   </div>
