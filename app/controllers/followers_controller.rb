@@ -20,8 +20,9 @@ class FollowersController < ApplicationController
     end
 
     post '/users/:id/unfollow' do
-        if follow_user = User.find(params[:id])
-            current_user.following_relationships.find_by(following_id: follow_user.id).destroy
+        follow_user = User.find_by_id(params[:id])
+        if follow_user.followers.include?(current_user)
+            follow_user.followers.destroy(current_user)
         end
         redirect "/following"
     end

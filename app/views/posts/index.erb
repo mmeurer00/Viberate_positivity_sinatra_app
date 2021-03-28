@@ -6,15 +6,17 @@
   <div class="card-body">
     <!----- <h5 class="card-title"></h5> ------>
     <h6 class="card-subtitle mb-2"><%= post.user.user_name %>
-    <% if post.user.following == false %>
-    <form action="/users/<%=post.user.id%>/follow" method = "POST">
-        <input type="submit" value = "Follow Account">
-    </form>
-            <% else %>    
-    <form action="/users/<%=post.user.id%>/unfollow" method = "POST">
-          <input type="submit" value = "Unfollow Account">    
-    </form>
-    <% end %> </h6>
+    <% if current_user.user_name != post.user.user_name %>
+      <% if post.user.followers.include?(current_user) == false %>
+      <form action="/users/<%=post.user.id%>/follow" method = "POST">
+          <input type="submit" value = "Follow Account">
+      </form>
+              <% else %>    
+      <form action="/users/<%=post.user.id%>/unfollow" method = "POST">
+            <input type="submit" value = "Unfollow Account">   
+      </form>
+      <% end %> </h6>
+    <%end%>
     <p class="card-text"><%= post.content %></p>
   </div>
   </div>

@@ -1,7 +1,12 @@
+<center>
 <h3> Following </h3>
 <% current_user.following.each do |user| %>
-    <li>
-    <%= user.user_name %>
-    </li>
+    <div class="card" style="width: 30rem;">
+    <div class="card-body">
+        <!----- <h5 class="card-title"></h5> ------>
+    <p class="card-text"><%= user.user_name %></p>
+    </div>
+    </div>
 <% end %>
+</center>
 
