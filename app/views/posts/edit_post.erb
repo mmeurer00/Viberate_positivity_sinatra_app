@@ -1,7 +1,12 @@
-<h2> Edit Post </h2>
-
-<form method="POST" action="/posts/<%=@post.id%>">
-  <input id="hidden" type="hidden" name="_method" value="PATCH">
-  <input type="text" name="content" value="<%=@post.content%>">
-  <input type="submit" value="Save Changes">
-</form>
+<center>
+<div class="card" style="width: 50rem;">
+<div class="card-body">
+  <h3 class="card-title">Edit Post</h3>
+  <form method="POST" action="/posts/<%=@post.id%>">
+    <input id="hidden" type="hidden" name="_method" value="PATCH">
+    <input type="text" name="content" value="<%=@post.content%>">
+    <button class="btn btn-primary" type="submit">Save Changes</button>
+  </form>
+</div>
+</div>
+</center>

@@ -1,8 +1,8 @@
-
+<center>
 <nav>
   <% if logged_in? %>
   <h2> Welcome back, <%=current_user.user_name %> !</h2>
-    <h3>Menu:</h3>
+    <!-------- <h3>Menu:</h3>
     <a href="/posts"><button type="button">Post Feed</button></a>
     <br>
     <br>
@@ -17,13 +17,13 @@
     <br>
     <a href="/following"><button type="button">Following</button></a>
     <br>
-    <br>
+    <br> ---------->
   
   <% else %>
     <h2>Welcome to Positive Vibes!</h2>
-    <h3>Please login or signup below:</h3>
-    <a href="/login"><button type="button">Login!</button></a>
-    <a href="/signup"><button type="button">Sign Up!</button></a>
+    <a href="/login"><button class="btn btn-primary" type="button">Login!</button></a>
+    <a href="/signup"><button class="btn btn-primary" type="button">Sign Up!</button></a>
   <%end %>
 
 </nav>
+</center>
