@@ -36,7 +36,7 @@ user@Users-MacBook_Air Viberate_positivity_sinatra_app % rake db:migrate
 ```
 user@Users-MacBook_Air Viberate_positivity_sinatra_app % shotgun
 ```
-Finally click on the link following '== Shotgun/Thin'
+8. Finally click on the link following '== Shotgun/Thin'
 ```
 == Shotgun/Thin on http://127.0.0.1:9393/
 ```
