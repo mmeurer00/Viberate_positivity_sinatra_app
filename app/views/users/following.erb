@@ -1,11 +1,15 @@
 <center>
-<h3> Following </h3>
+<div class="card" style="width: 20rem;">
+<div class="card-body">
+    <h3> Following </h3>
+</div>
+</div>
+<br>
 <% if current_user.following.length != 0 %>
     <% current_user.following.each do |user| %>
             <!----- <h5 class="card-title"></h5> ------>
         <div class="card" style="width: 20rem;">
         <div class="card-body">
-        <br>
         <h4><%= user.user_name %></h4>
         <% if user.followers.include?(current_user) == false %>
         <br>
@@ -18,10 +22,15 @@
             </form>
             </div>
             </div>
+            <br>
         <% end %> 
     <% end %>
 <% else %>
+<div class="card" style="width: 20rem;">
+<div class="card-body">
     <p> You havn't followed anyone yet! </p>
+</div>
+</div>
 <% end %>
 </center>
 

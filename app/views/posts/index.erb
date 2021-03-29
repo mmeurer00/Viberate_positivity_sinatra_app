@@ -1,6 +1,11 @@
 <center>
-<h2>Discover Positive Posts!</h2>
 <ul>
+<div class="card" style="width: 30rem;">
+<div class="card-body">
+  <h2>Discover Positive Posts!</h2>
+</div>
+</div>
+<br>
 <% @posts.each do |post| %>
   <div class="card" style="width: 30rem;">
   <div class="card-body">
@@ -16,12 +21,13 @@
       </form>
       <% end %> 
     <%end%>
-    Posted: <%=post.created_at.ago_in_words %>
+    <h6 class="card-subtitle mb-2 text-muted">Posted: <%=post.created_at.ago_in_words %></h6>
     <br>
     <h4 class="card-subtitle mb-2"><%= post.user.user_name %></h4>
-    <p class="card-text"><%= post.content %></p>
+    <p class="card-text"><q><%= post.content %></q></p>
   </div>
   </div>
+  <br>
 <% end %>
 </ul>
 </center>
