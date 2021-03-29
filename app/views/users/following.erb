@@ -1,12 +1,14 @@
 <center>
 <h3> Following </h3>
-<div class="card" style="width: 20rem;">
-<div class="card-body">
 <% if current_user.following.length != 0 %>
     <% current_user.following.each do |user| %>
             <!----- <h5 class="card-title"></h5> ------>
-        <p style="text-align:left;
+        <div class="card" style="width: 20rem;">
+        <div class="card-body">
+        <br>
+        <h4><%= user.user_name %></h4>
         <% if user.followers.include?(current_user) == false %>
+        <br>
             <form action="/users/<%=user.id%>/follow" method = "POST">
                 <input type="submit" value = "Follow">
             </form>
@@ -14,14 +16,12 @@
             <form action="/users/<%=user.id%>/unfollow" method = "POST">
                 <input type="submit" value = "Unfollow">   
             </form>
-        <% end %> <span style="float:right;"><%= user.user_name %></span></p>
+            </div>
+            </div>
+        <% end %> 
     <% end %>
-    </div>
-    </div>
 <% else %>
     <p> You havn't followed anyone yet! </p>
 <% end %>
-</div>
-</div>
 </center>
 

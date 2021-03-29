@@ -5,7 +5,6 @@
             <% user.posts.order('created_at desc').each do |post| %>
                 <div class="card" style="width: 30rem;">
                 <div class="card-body">
-                <p style="text-align:left;
                     <% if post.user.followers.include?(current_user) == false %>
                         <form action="/users/<%=post.user.id%>/follow" method = "POST">
                         <input type="submit" value = "Follow">
@@ -15,9 +14,8 @@
                             <input type="submit" value = "Unfollow">   
                         </form>
                     <% end %>
-                    <span style="float:right;">
-                    Posted: <%=  post.created_at.ago_in_words %></span></p>
-                    <h6><class="card-subtitle mb-2"><%= post.user.user_name %></h6>
+                    <p> Posted <%=  post.created_at.ago_in_words %></p>
+                    <h4><class="card-subtitle mb-2"><%= post.user.user_name %></h4>
                     <p class="card-text"><%= post.content %></p>
                     </div>
                     </div>

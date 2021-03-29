@@ -16,7 +16,7 @@ h1 {
 }
 body{
         margin: 0;
-        font-family: var(--bs-font-sans-serif);
+        font-family: Verdana, sans-serif;
         font-size: 1.1rem;
         font-weight: 200;
         line-height: 1.5;
