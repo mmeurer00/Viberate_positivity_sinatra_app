@@ -1,12 +1,12 @@
 ## <h1>🌻 Positive Vibes 🌻</h1>
-<hr>
+
 Positive Vibes takes social media back to its most basic form, while only allowing you to spread positivity! Positive Vibes is a MVC CRUD Sinatra web application. 
 
-<hr>
+
 
 ## <h2>Install Instructions 💛</h2>
 
-<hr>
+
 Users can access Positive Vibes by cloning this repository.
 
 1. Scroll up and find the green "Code" button:
@@ -44,24 +44,24 @@ user@Users-MacBook_Air Viberate_positivity_sinatra_app % shotgun
 
 Congrats 🎉 you can now spread positivity (locally)! 
 
-<hr>
+
 
 ## <h2>Contributing 🥰 </h2> 
 
-<hr>
+
 Since this application was primarily made for educational purposes, anyone is welcome to contribute. Make sure any pull requests have meaningfully commit messages that accurately and completely describe any changes. Do not include any changes that are not in the commit message.
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/mmeurer00/Viberate_positivity_sinatra_app. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
-<hr>
+
 
 ## <h2>License 🌱 </h2>
 
-<hr>
+
 
 [MIT](https://github.com/mmeurer00/Viberate_positivity_sinatra_app/blob/main/LICENSE)
-<hr>
+
 
 ## <h2>Code of Conduct ✌</h2>
 
-<hr>
+
 Everyone interacting in the Positive Vibes project’s codebases, issue trackers, posts and users are expected to follow the code of conduct.
