@@ -24,11 +24,12 @@
   <div class="card" style="width: 30rem;">
   <div class="card-body">
       <style="text-align: center"; class="text-muted">Posted: <%=post.created_at.ago_in_words %></p>
+      <br>
+  <p class="card-text"><q><q><%= post.content %></q></q></p>
+  <br>
  <% if current_user.user_name == post.user.user_name %>
  <a href="/posts/<%=post.id%>/edit"><button class="btn btn-outline-secondary btn-sm" type="button">Edit Post</button></a></p>
  <% end %>
- <br>
-  <p class="card-text"><q><q><%= post.content %></q></q></p>
   </div>
   </div>
   <br>

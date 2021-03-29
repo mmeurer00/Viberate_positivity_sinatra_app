@@ -11,7 +11,9 @@
   <div class="card-body">
     <!----- <h5 class="card-title"></h5> ------>
     <style="text-align: left"; class="card-subtitle"><%= post.user.user_name %>
-    <style="text-align: center"; class="text-muted">Posted: <%=post.created_at.ago_in_words %></p>
+    <style="text-align: center"; class="text-muted">Posted: <%=post.created_at.ago_in_words %></p><br>
+    <p class="card-text"><q><%=post.content %></q></p>
+    <br>
     <% if current_user.user_name != post.user.user_name %>
       <% if post.user.followers.include?(current_user) == false %>
       <form action="/users/<%=post.user.id%>/follow" method = "POST">
@@ -26,8 +28,6 @@
       <a href="/posts/<%=post.id%>/edit"><button class="btn btn-outline-secondary btn-sm" type="button">Edit Post</button></a>
     <br>
       <% end %>
-    <br>
-    <p class="card-text"><q><%=post.content %></q></p>
   </div>
   </div>
   <br>
