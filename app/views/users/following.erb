@@ -5,7 +5,7 @@
 <% if current_user.following.length != 0 %>
     <% current_user.following.each do |user| %>
             <!----- <h5 class="card-title"></h5> ------>
-        <p class="card-text"><%= user.user_name %>
+        <p style="text-align:left;
         <% if user.followers.include?(current_user) == false %>
             <form action="/users/<%=user.id%>/follow" method = "POST">
                 <input type="submit" value = "Follow">
@@ -14,7 +14,7 @@
             <form action="/users/<%=user.id%>/unfollow" method = "POST">
                 <input type="submit" value = "Unfollow">   
             </form>
-        <% end %> </p>
+        <% end %> <span style="float:right;"><%= user.user_name %></span></p>
     <% end %>
     </div>
     </div>
