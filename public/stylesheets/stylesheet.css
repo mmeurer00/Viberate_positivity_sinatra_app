@@ -6,14 +6,52 @@
     width: 1170px;
     margin:auto;
 }
+.nav-link {
+    color:#fffdbd;
+    font-size: 3rem;
+    font-weight: 200;
+    line-height:1.5;
+}
+.card-body{
+    color:  #96ada7;
+    font-weight: 200;
+     outline: 2px ;
+}
+.card-subtitle{
+    color: #72837f;
+    font-size: 1.5rem;
+    font-weight: 250;
+}
+.text-muted{
+    color: #72837f;
+    font-size: 1rem;
+    font-weight: 250;
+}
+.card-text{
+    color: #72837f;
+    font-size: 1rem;
+    font-weight: 300;
+}
+h1{
+    color:White;
+    font-size: 3rem;
+    font-weight: 200;
+    line-height:1.5;
+}
+header{
+    color:#fffdbd;
+    font-size: 3rem;
+    font-weight: 200;
+    line-height:1.5;
 
+}
 body{
         margin: 0;
         font-family: Verdana, sans-serif;
         font-size: 1.1rem;
         font-weight: 200;
         line-height: 1.5;
-        color: #212529;
+        color:  #96ada7;
         background-image: url("https://i.pinimg.com/564x/34/9d/d8/349dd82585c6ab9b823c5422f8b0814f.jpg");
         -webkit-text-size-adjust: 100%;
         -webkit-tap-highlight-color: transparent; 

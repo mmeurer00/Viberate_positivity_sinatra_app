@@ -13,13 +13,9 @@
         <h4><%= user.user_name %></h4>
         <% if user.followers.include?(current_user) == false %>
         <br>
-            <form action="/users/<%=user.id%>/follow" method = "POST">
-                <input type="submit" value = "Follow">
-            </form>
+        <a href="/users/<%=user.id%>/follow"><button class="btn btn-outline-secondary btn-sm" type="submit">Follow</button></a>
                     <% else %>    
-            <form action="/users/<%=user.id%>/unfollow" method = "POST">
-                <input type="submit" value = "Unfollow">   
-            </form>
+            <a href="/users/<%=user.id%>/follow"><button class="btn btn-outline-secondary btn-sm" type="submit">Unfollow</button></a>   
             </div>
             </div>
             <br>

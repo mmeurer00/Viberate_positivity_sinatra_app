@@ -7,18 +7,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <title>Positive Vibes</title>
 </head>
-<body>
-
     <!----------- START NAVBAR --------------->
     <% if logged_in? %>
-    <nav class="navbar">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <h3>Positive Vibes</h3>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <form action="/search" method="GET">
+    <nav>
+    <div class="nav-link" data-toggle="dropdown" role="button" aria-haspopup="true"
+    <h3>Positive Vibes</h3>
+        </div>
+        <div class="dropdown-menu" style="width: 18rem;>
+        <form action="/search" method="GET">
             <input type="text" name="search" placeholder="Search Users..." aria-label="Search...">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <button class="btn btn-outline-secondary" type="submit">Search</button>
           </form> 
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="/posts">Discover New Posts</a>
@@ -38,14 +36,21 @@
         </div>
         </div>
     </nav>
-    <% end %>
+    <center>
+    <header>
+      <% if logged_in? %>
+        <p> &nbsp; &nbsp; Welcome back, <%=current_user.user_name %> !</p>
+      <%end%>
+    </header>
+      <% end %>
+    </center>
 <!----------- END NAVBAR --------------->
-<!----------- START FLASH --------------->
-<!----------- END FLASH --------------->
              <%= yield %>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<body>    
 </body>
 </html>
