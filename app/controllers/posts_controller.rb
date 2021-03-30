@@ -28,14 +28,18 @@ class PostsController < ApplicationController
     post '/posts' do
       if logged_in?
           if params[:content] == ""
-            "Error #{post.errors.full_messages.join(", ")}"
-          else
+            "Error the content is blank, write something!"
+          else 
               @post = Post.new(params["post"])
-              @post.user = current_user
-              if @post.save
-                  redirect "/posts/#{@post.id}"
-              else
-                  redirect "/posts/new"
+              if @post.positive_post?
+                @post.user = current_user
+                if @post.save
+                    redirect "/posts/#{@post.id}"
+                else
+                    redirect "/posts/new"
+                end
+              else 
+                "Be more positive!"
               end
           end
       else
