@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
 
     def positive_post?
         response = TextSentiment::API.new.textanalysis(content)
-        response["pos"] > response["neg"]
+        response["pos"] + response["mid"] > response["neg"]
     end
 
 end

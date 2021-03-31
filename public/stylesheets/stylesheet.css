@@ -7,29 +7,36 @@
     margin:auto;
 }
 .nav-link {
-    color:#fffdbd;
+    color:white;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+	text-shadow: 0px 4px 4px grey;
     font-size: 3rem;
-    font-weight: 200;
+    font-weight: 500;
     line-height:1.5;
 }
+.card {
+    width: 30rem;
+    border-radius: 7px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px, 0px, 50px rgba(0, 0, 0, 0.2)
+}
 .card-body{
-    color:  #96ada7;
+    color:rgb(249, 131, 4);
     font-weight: 200;
      outline: 2px ;
 }
 .card-subtitle{
-    color: #72837f;
+    color: rgb(249, 131, 4);
     font-size: 1.5rem;
     font-weight: 250;
 }
 .text-muted{
-    color: #72837f;
+    color: rgb(249, 131, 4);
     font-size: 1rem;
     font-weight: 250;
 }
 .card-text{
-    color: #72837f;
-    font-size: 1rem;
+    color:black;
+    font-size: 1.5rem;
     font-weight: 300;
 }
 h1{
@@ -39,11 +46,31 @@ h1{
     line-height:1.5;
 }
 header{
-    color:#fffdbd;
+    color:white;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+	text-shadow: 0px 4px 4px grey;
     font-size: 3rem;
     font-weight: 200;
     line-height:1.5;
 
+}
+.login {
+    color:#b77841;
+    font-family: 'Abril Fatface';
+    font-size: 6rem;
+    font-weight: 500;
+    -webkit-text-stroke: .75px #1a1724 ;
+	text-shadow: 0px 2px 2px #1a1724;
+    line-height:1.5;
+}
+.login-sentence {
+    color:#8bbaf7;
+    font-family: 'Alfa Slab One';
+    font-size: 2rem;
+    font-weight: 300;
+    -webkit-text-stroke: .75px #282828;
+	text-shadow: 0px 2px 2px #282828;
+    line-height:1.5;
 }
 body{
         margin: 0;
@@ -51,8 +78,9 @@ body{
         font-size: 1.1rem;
         font-weight: 200;
         line-height: 1.5;
-        color:  #96ada7;
-        background-image: url("https://i.pinimg.com/564x/34/9d/d8/349dd82585c6ab9b823c5422f8b0814f.jpg");
+        color:  rgb(173, 193, 47);
+        background-image: url("https://as1.ftcdn.net/jpg/02/71/03/07/240_F_271030736_5CLRYhZCxFQ5Tt4v90WuIxxYcJ8Gq45l.jpg");
+        background-size: contain;
         -webkit-text-size-adjust: 100%;
         -webkit-tap-highlight-color: transparent; 
 }

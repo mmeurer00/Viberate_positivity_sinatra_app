@@ -13,7 +13,7 @@
                 <p class="card-subtitle mb-2"><%= post.user.user_name %> 
                 <class="text-muted">Posted: <%=post.created_at.ago_in_words %></p>
                 <br>
-                <p class="card-text"><q><%= post.content %></q></p>
+                <p class="card-text"><%= post.content %></q></p>
                 <br>
                     <% if post.user.followers.include?(current_user) == false %>
                         <form action="/users/<%=post.user.id%>/follow" method = "POST">
