@@ -55,7 +55,7 @@ header{
 
 }
 .login {
-    color:#b77841;
+    color:rgb(249, 131, 4);
     font-family: 'Abril Fatface';
     font-size: 6rem;
     font-weight: 500;
@@ -64,12 +64,12 @@ header{
     line-height:1.5;
 }
 .login-sentence {
-    color:#8bbaf7;
+    color:#b7ddff;
     font-family: 'Alfa Slab One';
     font-size: 2rem;
     font-weight: 300;
-    -webkit-text-stroke: .75px #282828;
-	text-shadow: 0px 2px 2px #282828;
+    -webkit-text-stroke: .75px #1a1724;
+	text-shadow: 0px 2px 2px #1a1724;
     line-height:1.5;
 }
 body{

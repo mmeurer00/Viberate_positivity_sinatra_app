@@ -1,4 +1,9 @@
 <center>
+  <header>
+    <% if logged_in? %>
+      <p> &nbsp; &nbsp; Welcome back, <%=current_user.user_name %> !</p>
+    <%end%>
+  </header>
 <ul>
 <div class="card">
 <div class="card-body">

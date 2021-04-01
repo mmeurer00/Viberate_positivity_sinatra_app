@@ -20,7 +20,7 @@
 <% if @user.posts.length == 0 %>
   <p> This user has not written any posts yet. </p>
 <% else %>
-<% @user.posts.each do |post| %>
+<% @user.posts.order("updated_at DESC").each do |post| %>
   <div class="card" style="width: 30rem;">
   <div class="card-body">
       <style="text-align: center"; class="text-muted">Posted: <%=post.created_at.ago_in_words %></p>
