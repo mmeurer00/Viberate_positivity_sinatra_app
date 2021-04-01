@@ -7,11 +7,16 @@ class ApplicationController < Sinatra::Base
         set :views, 'app/views'
         enable :sessions
         set :session_secret, ENV["SESSION_SECRET"]
+        set :show_exceptions, :after_handler
         use Rack::Flash, :sweep => true
     end
 
     get '/' do
         erb :index
+    end
+
+    not_found do
+        erb :'oops'
     end
 
   helpers do
