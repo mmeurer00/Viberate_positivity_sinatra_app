@@ -14,8 +14,8 @@
         <% if user.followers.include?(current_user) == false %>
         <br>
         <a href="/users/<%=user.id%>/follow"><button class="btn btn-outline-secondary btn-sm" type="submit">Follow</button></a>
-                    <% else %>    
-            <a href="/users/<%=user.id%>/follow"><button class="btn btn-outline-secondary btn-sm" type="submit">Unfollow</button></a>   
+        <% else %>    
+            <a href="/users/<%=user.id%>/Unfollow"><button class="btn btn-outline-secondary btn-sm" type="submit">Unfollow</button></a>   
             </div>
             </div>
             <br>

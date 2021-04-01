@@ -6,7 +6,6 @@ class Post < ActiveRecord::Base
         response = TextSentiment::API.new.textanalysis(content)
         response["pos"] + response["mid"] > response["neg"]
     end
-
 end
 
 

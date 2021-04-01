@@ -1,8 +1,10 @@
 <center>
   <div class="card" style="width: 30rem;">
   <div class="card-body">
-    <h3> Your most recent post: </h3>
-    <h6><><%=@post.content%></></h6>
+    <h3> Your most recent post: </h4>
+    <div class="card-text">
+      <h4><%=@post.content%></h6>
+    </div class="card-text">
     <br>
     <p class="card-text">
     <a href="/posts/<%=@post.id%>/edit"><button class="btn btn-outline-secondary btn-sm" type="button">Edit Post</button></a>
