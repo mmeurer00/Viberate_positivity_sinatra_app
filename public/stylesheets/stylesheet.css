@@ -7,6 +7,7 @@
     margin:auto;
 }
 .nav-link {
+    position: relative;
     color:white;
     -webkit-text-stroke: 1px rgb(255, 255, 255);
 	text-shadow: 0px 4px 4px grey;
@@ -116,9 +117,106 @@ body{
     line-height: 20px;
     cursor: pointer;
     transition: 0.3s;
+}
+  
+.closebtn:hover {
+    color: black;
+}
+
+.footer {
+    height: 330px;
+    position: relative;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+}
+.clearfooter {
+    height: 330px;
+    clear: both;
+}
+
+.loginbtn {
+    background-color: rgb(249, 131, 4);
+    display: inline-block;
+    padding: 5px 10px 6px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    line-height: 1;
+    border-bottom: 1px solid #222;
+    border-radius: 12px;
+    position: relative;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.loginbtn:hover {background-color: #072d08
+}
+.loginbtn:active {
+  background-color: #072d08;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.btn {
+    background-color: rgb(249, 131, 4);
+    display: inline-block;
+    padding: 5px 10px 6px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    line-height: 1;
+    border-bottom: 1px solid #222;
+    border-radius: 12px;
+    position: relative;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.btn:hover {background-color: rgb(249, 131, 4)
+}
+.btn:active {
+  background-color: rgb(249, 131, 4);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.searchbtn {
+    background-color: rgb(249, 131, 4);
+    display: inline-block;
+    border-radius: 4px;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+.searchbtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  .searchbtn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
   }
   
-  .closebtn:hover {
-    color: black;
+  .searchbtn:hover span {
+    padding-right: 25px;
   }
-
+  
+  .searchbtn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }

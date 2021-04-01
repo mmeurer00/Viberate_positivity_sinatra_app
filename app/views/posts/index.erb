@@ -22,15 +22,15 @@
     <% if current_user.user_name != post.user.user_name %>
       <% if post.user.followers.include?(current_user) == false %>
       <form action="/users/<%=post.user.id%>/follow" method = "POST">
-      <button class="btn btn-outline-secondary btn-sm" type="submit">Follow</button> 
+      <button class="btn btn-sm" type="submit">Follow</button> 
       </form>
   <% else %>    
       <form action="/users/<%=post.user.id%>/unfollow" method = "POST">
-          <button class="btn btn-outline-secondary btn-sm" type="submit">Unfollow</button>  
+          <button class="btn btn-sm" type="submit">Unfollow</button>  
       </form>
     <% end %>
     <% else %>
-      <a href="/posts/<%=post.id%>/edit"><button class="btn btn-outline-secondary btn-sm" type="button">Edit Post</button></a>
+      <a href="/posts/<%=post.id%>/edit"><button class="btn btn-sm" type="button">Edit Post</button></a>
     <br>
       <% end %>
   </div>
