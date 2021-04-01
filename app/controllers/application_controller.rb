@@ -34,6 +34,11 @@ class ApplicationController < Sinatra::Base
         current_user.following.include?(user)
     end
 
+    def redirect_login
+        if !logged_in? 
+            redirect '/login'
+        end
+    end
     
   end
 

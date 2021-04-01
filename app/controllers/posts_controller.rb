@@ -1,11 +1,8 @@
 class PostsController < ApplicationController
     get '/posts' do
-      if logged_in?
+      redirect_login
         @posts = Post.all
         erb :'/posts/index'
-      else
-        redirect to '/login'
-      end
     end
 
     get '/friends/posts' do
