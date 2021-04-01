@@ -1,6 +1,6 @@
 ## <h1>🌻 Positive Vibes 🌻</h1>
 
-Positive Vibes takes social media back to its most basic form, while only allowing you to spread positivity! Positive Vibes is a MVC CRUD Sinatra web application. 
+Positive Vibes takes social media back to its most basic form, while only allowing you to spread positivity! The app uses an API to determine whether your post contains too much negativity, elimating some of the harmful interactions that take place over social media. Positive Vibes is a MVC CRUD Sinatra web application. 
 
 
 
