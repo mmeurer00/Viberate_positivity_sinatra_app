@@ -13,3 +13,4 @@ gem 'bcrypt'
 gem "tux"
 gem 'dotenv'
 gem 'time_ago_in_words'
+gem 'rack-flash3'

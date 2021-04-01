@@ -39,13 +39,14 @@ class PostsController < ApplicationController
                     redirect "/posts/new"
                 end
               else 
-                "Be more positive!"
+                flash[:error] = "Uh Oh! It looks like the message you we're trying to post contains some negativity. Try rephrasing it!"
+                redirect 'posts/new'
               end
-          end
+            end
       else
         redirect to '/login'
       end
-  end
+    end
 
     get '/posts/:id' do
       if logged_in?
@@ -88,14 +89,13 @@ class PostsController < ApplicationController
     delete '/posts/:id' do
       if logged_in?
         @post = Post.find_by_id(params[:id])
-        #if @post.user == current_user
-        #erb :'/posts/show_post'
+        if @post.user == current_user
+        erb :'/posts/show_post'
         @post.destroy
-        #end
+        end
         redirect to '/posts'
       else
         redirect to '/login'
       end
     end
 end
-    
