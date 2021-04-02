@@ -13,10 +13,10 @@
         <h4><%= user.user_name %></h4>
         <% if user.followers.include?(current_user) == false %>
         <br>
-        <a href="/users/<%=user.id%>/follow"><button class="btn btn-outline-secondary btn-sm" type="submit">Follow</button></a>
+        <a href="/users/<%=user.id%>/follow"><button class="btn btn-sm" type="submit">Follow</button></a>
         <% else %>    
         <form action="/users/<%=user.id%>/unfollow" method = "POST">
-        <button class="btn btn-outline-secondary btn-sm" type="submit">Unfollow</button>  
+        <button class="btn btn-sm" type="submit">Unfollow</button>  
         </form>
             </div>
             </div>
