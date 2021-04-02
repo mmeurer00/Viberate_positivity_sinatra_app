@@ -6,11 +6,11 @@
 <% if current_user.user_name != @user.user_name %>
   <% if !following? %>
   <form action="/users/<%=@user.id%>/follow" method = "POST">
-  <button class="btn btn-outline-secondary btn-sm" type="submit">Follow</button> 
+  <button class="btn btn-sm" type="submit">Follow</button> 
   </form>
           <% else %>    
   <form action="/users/<%=@user.id%>/unfollow" method = "POST">
-    <button class="btn btn-outline-secondary btn-sm" type="submit">Unfollow</button> 
+    <button class="btn btn-sm" type="submit">Unfollow</button> 
   </form>
   <% end %> 
 <% end %>
@@ -28,7 +28,7 @@
   <p class="card-text"><%= post.content %></p>
   <br>
  <% if current_user.user_name == post.user.user_name %>
- <a href="/posts/<%=post.id%>/edit"><button class="btn btn-outline-secondary btn-sm" type="button">Edit Post</button></a></p>
+ <a href="/posts/<%=post.id%>/edit"><button class="btn btn-sm" type="button">Edit Post</button></a></p>
  <% end %>
   </div>
   </div>
